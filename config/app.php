@@ -162,6 +162,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        App\Providers\AclServiceProvider::class,
+        App\Providers\AclviewServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -227,7 +229,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Acl' => App\CoreMechanism\Acl::class,
     ],
 
 ];

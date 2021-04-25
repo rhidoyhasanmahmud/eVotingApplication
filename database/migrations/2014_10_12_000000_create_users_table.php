@@ -19,8 +19,21 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('province');
+            $table->string('constituency');
+            $table->tinyInteger('is_system_user')->default(0);
+            $table->string('sub_county');
+            $table->tinyInteger('active')->default(0);
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('group_id')->constrained()->onDelete('cascade');
+        });
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('country_id')->constrained()->onDelete('cascade');
         });
     }
 
