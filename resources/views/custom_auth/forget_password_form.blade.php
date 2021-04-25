@@ -35,7 +35,7 @@
 </head>
 
 <!-- light-login/blur-login -->
-<body class="login-layout light-login">
+<body class="login-layout blur-login">
 <div class="main-container">
     <div class="main-content">
         <div class="row">
